@@ -1,0 +1,36 @@
+[build]
+    publish = "./dist"
+    command = "yarn build"
+    ignore = "/bin/false"
+
+[build.environment]
+    NETLIFY_USE_YARN = "true"
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        X-Frame-Options = "deny"
+        Content-Security-Policy = """
+            frame-ancestors 'none'
+        """
+[[headers]]
+    for = "/auto-import-secret-key*"
+    [headers.values]
+        X-Robots-Tag = "noindex"
+[[headers]]
+    for = "/auto-import-seed-phrase*"
+    [headers.values]
+        X-Robots-Tag = "noindex"
+[[headers]]
+    for = "/recover-seed-phrase*"
+    [headers.values]
+        X-Robots-Tag = "noindex"
+[[headers]]
+    for = "/recover-with-link*"
+    [headers.values]
+        X-Robots-Tag = "noindex"
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200

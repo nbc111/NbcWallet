@@ -1,0 +1,74 @@
+const { BN } = require('bn.js');
+const { JsonRpcProvider } = require('near-api-js/lib/providers');
+const { parseNearAmount } = require('near-api-js/lib/utils/format');
+
+const nearApiJsConnection = require('./connectionSingleton');
+const E2eTestAccount = require('./E2eTestAccount');
+const { generateTestAccountId, getWorkerAccountRegex } = require('./helpers');
+const { getTestAccountSeedPhrase } = require('./helpers');
+const { createAccountWithHelper } = require('../services/contractHelper');
+const { TEST_WORKER_INDEX } = process.env;
+
+class SelfReloadingJSONRpcProvider extends JsonRpcProvider {
+    constructor(...args) {
+        super(...args);
+        this.reloadingPromise = null;
+    }
+    sendTransaction(signedTransaction) {
+        return super.sendTransaction.call(this, signedTransaction).catch(async (e) => {
+            if (e.type === 'NotEnoughBalance') {
+                if (!this.reloadingPromise) {
+                    this.reloadingPromise = SelfReloadingJSONRpcProvider.reloadAccount(
+                        signedTransaction.transaction.signerId
+                    )
+                        .catch((err) => console.log(err))
+                        .finally(() => {
+                            this.reloadingPromise = null;
+                        });
+                }
+                return this.reloadingPromise.then(() => {
+                    if (
+                        getWorkerAccountRegex(TEST_WORKER_INDEX).test(
+                            signedTransaction.transaction.signerId
+                        )
+                    ) {
+                        process.env.workerBankStartBalance = new BN(
+                            process.env.workerBankStartBalance
+                        )
+                            .add(new BN(parseNearAmount('200')))
+                            .toString();
+                    }
+                    return super.sendTransaction.call(this, signedTransaction);
+                });
+            }
+            throw e;
+        });
+    }
+    static async reloadAccount(accountId) {
+        const randomSubaccountId = `${generateTestAccountId()}.${
+            nearApiJsConnection.config.networkId
+        }`;
+        const randomSubaccountSeedphrase = getTestAccountSeedPhrase(randomSubaccountId);
+
+        const createAccountSuccess = await createAccountWithHelper(
+            randomSubaccountId,
+            randomSubaccountSeedphrase
+        );
+
+        if (!createAccountSuccess) {
+            return;
+        }
+
+        const randomAccount = new E2eTestAccount(
+            randomSubaccountId,
+            randomSubaccountSeedphrase,
+            {
+                accountId: nearApiJsConnection.config.networkId,
+            }
+        ).initialize();
+
+        return randomAccount.nearApiJsAccount.deleteAccount(accountId);
+    }
+}
+
+module.exports = SelfReloadingJSONRpcProvider;

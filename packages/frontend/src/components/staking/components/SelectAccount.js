@@ -1,0 +1,90 @@
+import React from 'react';
+import { Translate } from 'react-localize-redux';
+import styled from 'styled-components';
+
+import Balance from '../../common/balance/Balance';
+import RadioButton from '../../common/radio_button/RadioButton';
+import RadioGroup from '../../common/radio_button/RadioGroup';
+import { selectAvailableBalance } from '../../../redux/slices/account';
+import { useSelector } from 'react-redux';
+
+const Container = styled.div`
+    > div {
+        :first-of-type {
+            margin-bottom: 8px;
+            font-weight: 600;
+            max-width: 260px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #24272a;
+
+            @media (max-width: 330px) {
+                max-width: 200px;
+            }
+        }
+
+        :last-of-type {
+            > div {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                font-size: 14px;
+
+                .balance {
+                    text-align: right;
+                }
+
+                :first-of-type {
+                    color: #00c08b;
+                }
+
+                :last-of-type {
+                    margin-top: 5px;
+                    color: #6e7073;
+                }
+            }
+        }
+    }
+`;
+
+export default function SelectAccount({ accounts, onChange, selectedAccount }) {
+    const availableBalance = useSelector(selectAvailableBalance);
+    return (
+        <RadioGroup
+            onChange={
+                accounts.length > 1 &&
+                accounts.every((account) => !!account.totalUnstaked)
+                    ? (e) => onChange(e)
+                    : null
+            }
+            selectedValue={selectedAccount}
+        >
+            {accounts.map((account, i) => (
+                <RadioButton value={account.accountId} key={i}>
+                    <Container>
+                        <div>{account.accountId}</div>
+                        <div>
+                            <div>
+                                <Translate id='staking.staking.available' />
+                                <Balance
+                                    data-test-id='accountSelectAvailableBalance'
+                                    amount={availableBalance}
+                                    showBalanceInUSD={false}
+                                />
+                            </div>
+                            <div>
+                                <Translate id='staking.staking.totalStaked' />
+                                <Balance
+                                    data-test-id='accountSelectStakedBalance'
+                                    amount={account.totalStaked}
+                                    showBalanceInUSD={false}
+                                />
+                            </div>
+                        </div>
+                    </Container>
+                </RadioButton>
+            ))}
+        </RadioGroup>
+    );
+}
