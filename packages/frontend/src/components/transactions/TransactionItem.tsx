@@ -43,7 +43,9 @@ export const TransactionItem = (
                                 ])}
                             >
                                 {getPrefixByDir(props.dir)}
-                                {props.assetChangeText}
+                                {props.assetChangeText?.includes('NEAR')
+    ? props.assetChangeText.replace('NEAR', 'NBC')
+    : props.assetChangeText}
                             </div>
                         )}
                     </div>

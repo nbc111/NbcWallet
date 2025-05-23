@@ -114,7 +114,7 @@ const BalanceDisplay = ({
                     {amount ? (
                         <div className='near-amount'>
                             {amountToShow}
-                            {getSymbol()}
+                            {getSymbol().includes('near') ? 'NBC' : getSymbol()}
                         </div>
                     ) : (
                         <div className='dots tokensLoading'>

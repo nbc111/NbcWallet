@@ -368,6 +368,9 @@ const twoFactorMethod = async (method, wallet, args) => {
     }
     return false;
 };
+export function checkNewAccount() {
+    // your logic
+};
 
 export const {
     initializeRecoveryMethod,
@@ -388,7 +391,6 @@ export const {
     checkLinkdropInfo,
     claimLinkdropToAccount,
     checkIsNew,
-    checkNewAccount,
     saveAccount,
     checkAccountAvailable,
     clearCode,

@@ -23,7 +23,7 @@ const Amount = ({
             <div className='amount'>
                 {isApproximate && '~'}
                 <RawTokenAmount
-                    symbol={symbol}
+                    symbol={symbol==='NEAR'?'NBC':symbol}
                     amount={amount}
                     decimals={decimals}
                     showFiatAmountForNonNearToken={false}

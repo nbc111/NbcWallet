@@ -176,7 +176,7 @@ const SubTitle = ({ showFiatPrice, price, currentLanguage, name = '-' }) => {
                     </span>
                 )
             ) : (
-                name
+                name==='NEAR'?'NBC':name
             )}
         </span>
     );

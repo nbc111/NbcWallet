@@ -66,7 +66,9 @@ const TransactionItemModal = () => {
                                         ])}
                                     >
                                         {getPrefixByDir(tx.dir)}
-                                        {tx.assetChangeText}
+                                        {tx.assetChangeText.includes('NEAR')
+    ? tx.assetChangeText.replace('NEAR', 'NBC')
+    : tx.assetChangeText}
                                     </span>
                                 )}
                                 <br />

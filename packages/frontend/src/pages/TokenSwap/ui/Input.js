@@ -185,8 +185,11 @@ const Input = ({
                     >
                         <SafeTranslate
                             id={disabled ? 'swap.available' : 'swap.max'}
-                            data={balanceData}
-                        />
+                            data={{
+                            ...balanceData,
+                            symbol: balanceData.symbol === 'NEAR' ? 'NBC' : balanceData.symbol,
+                    }}
+/>
                     </Balance>
                 )}
             </Header>
@@ -196,7 +199,7 @@ const Input = ({
                     onClick={onSelectToken}
                     data-test-id={tokenSelectTestId}
                 >
-                    <Token symbol={tokenSymbol} icon={tokenIcon} />
+                    <Token  symbol={    typeof tokenSymbol === 'string' && tokenSymbol.includes('NEAR') ? tokenSymbol.replace('NEAR', 'NBC'): tokenSymbol || ''} icon={tokenIcon} />
                     <ChevronIcon color='var(--mnw-color-1)' />
                 </TokenWrapper>
                 <input

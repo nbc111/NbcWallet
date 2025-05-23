@@ -52,8 +52,8 @@ export default function useSwapInfo({
                 id: 'swap.noPoolAvailable',
                 type: NOTIFICATION_TYPE.warning,
                 data: {
-                    tokenIn: tokenIn.onChainFTMetadata.symbol,
-                    tokenOut: tokenOut.onChainFTMetadata.symbol,
+                    tokenIn:typeof tokenIn.onChainFTMetadata.symbol === 'string' && tokenIn.onChainFTMetadata.symbol.includes('NEAR')? tokenIn.onChainFTMetadata.symbol.replace('NEAR', 'NBC'): tokenIn.onChainFTMetadata.symbol || '',
+                    tokenOut: typeof tokenOut.onChainFTMetadata.symbol=== 'string' && tokenOut.onChainFTMetadata.symbol.includes('NEAR')? tokenOut.onChainFTMetadata.symbol.replace('NEAR', 'NBC'): tokenOut.onChainFTMetadata.symbol || '',
                 },
             });
         } else if (poolsError) {
