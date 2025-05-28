@@ -6,32 +6,32 @@ MyNBCWallet 是官方推荐的 NBC 区块链钱包，致力于为用户提供安
 － 充值NBC兑换NBC
 － 管理多个 NBC 账户
 － 质押与赎回NBC
-首页
+### 首页
 ![image](https://github.com/user-attachments/assets/2476ef23-a997-4998-a953-a03a184e03b0)
 
 ## 二、主要功能
-1.创建钱包
+### 1.创建钱包
 支持使用助记词创建新NBC钱包账户，自动备份钱包信息以便日后恢复，每个钱包均配备唯一的NBC公钥和私钥对。
 验证ID
 ![image](https://github.com/user-attachments/assets/98f87249-f3b7-4472-bc82-06234637fc9f)
 
 
-通过验证
+### 通过验证
 ![image](https://github.com/user-attachments/assets/359943ca-5f7f-416c-ab31-4150a1e3bd29)
 
-选择保护账户的方式
+### 选择保护账户的方式
 ![image](https://github.com/user-attachments/assets/b9eda9c6-f070-4740-acee-431105a1e6db)
 
-安全助记词
+### 安全助记词
 ![image](https://github.com/user-attachments/assets/9dc1a9d6-7641-47d9-aa63-b365b0712614)
 
-验证助记词
+### 验证助记词
 ![image](https://github.com/user-attachments/assets/d6d9cb06-4b0c-4a21-8667-37613441a0ee)
 
-创建成功－首页
+### 创建成功－首页
 ![image](https://github.com/user-attachments/assets/d97cc576-2ffc-4398-85a6-3c8201c9fa83)
 
-2.导入钱包
+### 2.导入钱包
 支持通过助记词、密码、手机或邮箱导入已有NBC钱包，同时支持Ledger硬件钱包连接，确保资产安全无忧。
 ![image](https://github.com/user-attachments/assets/fdcd64c9-bda5-4ebd-ab02-173b39f8fd73)
 
@@ -39,27 +39,27 @@ MyNBCWallet 是官方推荐的 NBC 区块链钱包，致力于为用户提供安
 3.发送/接收 NBC
 - 实时发送 NBC 到其他地址，支持备注信息。
 - 通过二维码或地址复制快速接收 NBC。
-转出－输入数量
+### 转出－输入数量
 ![image](https://github.com/user-attachments/assets/3a264467-0fd3-44d4-8ffe-606501c2fc03)
 
-转出－输入账户ID
+### 转出－输入账户ID
 ![image](https://github.com/user-attachments/assets/e3ef05c7-5a8f-4689-a781-15911d099ce1)
 
-转出－最终确认
+### 转出－最终确认
 ![kappframework-BciBHJ(1)(1)](https://github.com/user-attachments/assets/44f1cf22-9fe3-40aa-8240-adc3348a935d)
 
-转出-成功
+### 转出-成功
 ![image](https://github.com/user-attachments/assets/8f8387a9-68e2-4b3b-9f0d-8399818b7f5a)
 
-接收
+### 接收
 ![image](https://github.com/user-attachments/assets/9d58eff0-3c43-4888-80fd-98c77b834e45)
 
-4.多账户管理
+### 4.多账户管理
 - 一个 MyNBCWallet 支持管理多个 NBC 账户。
 - 轻松实现账号快速切换，便捷查看各账户余额及交易历史记录。
 ![image](https://github.com/user-attachments/assets/79654840-5299-4e26-a92c-0268150c95d1)
 
-5.充值与兑换
+### 5.充值与兑换
 ![image](https://github.com/user-attachments/assets/6dd53735-3529-4a5c-80dd-0f0b930db23b)
 ![image](https://github.com/user-attachments/assets/4efb47dc-e960-4935-8ed4-cdfdf8690a95)
 
@@ -87,14 +87,14 @@ A：请务必保密您的助记词与私钥，切勿轻易透露给他人。为�
 ## 七、NBC 质押功能（Staking）
 NBC 网络采用 权益证明机制（PoS），支持用户通过质押 NBC 参与网络验证并获得奖励。MyNBCWallet 提供了简单直观的质押操作界面，让用户可以一键参与。
 
-质押首页
-![image](https://github.com/user-attachments/assets/d983a840-caec-4c5e-a322-1264480fbb4d)
-![image](https://github.com/user-attachments/assets/a9487785-2a48-4c12-b194-eaca8d6260df)
-![image](https://github.com/user-attachments/assets/c00a5bc7-af4f-4cbe-a99c-019a77283fc0)
-![image](https://github.com/user-attachments/assets/e1543186-f9ce-4d70-ac01-29313b43695c)
-![image](https://github.com/user-attachments/assets/7f042a75-8ec9-41b0-aaee-866a2c062c23)
+### 质押首页
+### ![image](https://github.com/user-attachments/assets/d983a840-caec-4c5e-a322-1264480fbb4d)
+### ![image](https://github.com/user-attachments/assets/a9487785-2a48-4c12-b194-eaca8d6260df)
+### ![image](https://github.com/user-attachments/assets/c00a5bc7-af4f-4cbe-a99c-019a77283fc0)
+### ![image](https://github.com/user-attachments/assets/e1543186-f9ce-4d70-ac01-29313b43695c)
+### ![image](https://github.com/user-attachments/assets/7f042a75-8ec9-41b0-aaee-866a2c062c23)
 
-1. 什么是 NBC 质押？
+### 1. 什么是 NBC 质押？
 NBC 质押意味着您将账户中的NBC托付给网络的验证节点（Validator），共同为网络的安全保驾护航。作为对您贡献的认可，您将收获相应的质押奖励。
 - 无需将资产转出钱包
 - 可随时取消质押并赎回资金（根据锁定期）
