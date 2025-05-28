@@ -1,5 +1,5 @@
-MyNbcWallet
-一、产品简介
+# MyNbcWallet
+## 一、产品简介
 MyNBCWallet 是官方推荐的 NBC 区块链钱包，致力于为用户提供安全、便捷的 NBC 资产管理服务。通过 MyNBCWallet，您可以：
 － 安全存储 NBC 及其代币
 － 发送和接收 NBC
@@ -9,7 +9,7 @@ MyNBCWallet 是官方推荐的 NBC 区块链钱包，致力于为用户提供安
 首页
 ![image](https://github.com/user-attachments/assets/2476ef23-a997-4998-a953-a03a184e03b0)
 
-二、主要功能
+## 二、主要功能
 1.创建钱包
 支持使用助记词创建新NBC钱包账户，自动备份钱包信息以便日后恢复，每个钱包均配备唯一的NBC公钥和私钥对。
 验证ID
@@ -64,27 +64,27 @@ MyNBCWallet 是官方推荐的 NBC 区块链钱包，致力于为用户提供安
 ![image](https://github.com/user-attachments/assets/4efb47dc-e960-4935-8ed4-cdfdf8690a95)
 
 
-三、安全性说明
+## 三、安全性说明
 MyNBCWallet 严格保障用户隐私，不存储您的私钥或助记词，所有敏感数据均加密存储于您的本地设备。
 - 提供生物识别及密码锁定双重保护，确保账户安全无忧。
 - 与Ledger等知名品牌硬件钱包无缝集成，支持冷签名技术，提升交易安全性。
 - 所有交易均需用户亲自授权签名，有效防止任何未经授权的操作，保障资金安全。
 
-四、兼容性
+## 四、兼容性
 MyNBCWallet 全面兼容主流操作系统及浏览器，包括桌面端的Chrome、Firefox、Edge等，以及移动端的Android和iOS系统，并支持PWA应用安装，随时随地轻松管理您的资产。
-五、常见问题 FAQ
+## 五、常见问题 FAQ
 Q2：MyNBCWallet 是否收取手续费？ 
 A：钱包本身不收取费用，但每笔交易会收取网络的gas费，类似于以太坊网络中的Gas费，用于支付交易处理和网络维护的成本。
 
 Q3：如何保证我的资产安全？
 A：请务必保密您的助记词与私钥，切勿轻易透露给他人。为了进一步提升资产安全，我们强烈推荐您采用硬件钱包进行存储。
 
-六、联系我们
+## 六、联系我们
 - 官网：https://mynbcwallet.com
 - 社区支持：Telegram、Discord、Twitter（请参见官网链接）
 - 邮箱支持：support@mynbcwallet.com
 
-七、NBC 质押功能（Staking）
+## 七、NBC 质押功能（Staking）
 NBC 网络采用 权益证明机制（PoS），支持用户通过质押 NBC 参与网络验证并获得奖励。MyNBCWallet 提供了简单直观的质押操作界面，让用户可以一键参与。
 
 质押首页
@@ -136,8 +136,8 @@ Q2：我可以质押多个节点吗？
 A：可以，一般每个账户支持多个验证节点委托，以实现风险分散。
 
 
-八、Explore页面
+## 八、Explore页面
 ![image](https://github.com/user-attachments/assets/add8e17f-71f6-419a-8a60-8cdcce23afcd)
 
-九、账户信息 
+## 九、账户信息 
 ![Uploading image.png…]()
