@@ -132,7 +132,7 @@ const Footer = () => {
                 <Translate id='footer.needHelp' />
                 <br />
                 <a
-                    href='https://discord.gg/XUPPddjVcr'
+                    href='https://discord.gg'
                     rel='noopener noreferrer'
                     target='_blank'
                     onClick={() => Mixpanel.track('Footer Click Join Community')}

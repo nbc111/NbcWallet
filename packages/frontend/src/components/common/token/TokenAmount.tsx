@@ -61,8 +61,11 @@ const TokenAmount: FC<TokenAmountProps> = ({
                 ) : (
                     <span className='dots' />
                 )}
+                
                 <span className='currency'>
-                    {withSymbol ? ` ${onChainFTMetadata?.symbol}` : null}
+                {withSymbol ? ` ${onChainFTMetadata?.symbol?.includes('NEAR') ? 'NBC' : onChainFTMetadata?.symbol}` : null}
+
+                    
                 </span>
             </div>
 

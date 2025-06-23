@@ -13,7 +13,7 @@ const Token = ({ symbol, icon, translateIdTitle, onClick }) => {
                 <span>
                     <TokenIcon symbol={symbol} icon={icon} />
                 </span>
-                {symbol}
+                {symbol?.toUpperCase().includes('NEAR') ? 'NBC' : symbol}
             </div>
         </StyledContainer>
     );

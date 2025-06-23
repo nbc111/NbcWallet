@@ -32,5 +32,11 @@ export default function SafeTranslate({ children, ...origProps }) {
         data: processDataValue(origProps.data),
     };
 
-    return <Translate {...props}>{children}</Translate>;
+    return (
+        <Translate {...props}>
+          {typeof children === 'string'
+            ? children.replace('NEAR', 'NBC')
+            : children}
+        </Translate>
+      );
 }
