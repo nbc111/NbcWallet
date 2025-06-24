@@ -108,7 +108,7 @@ const NetworkBanner = ({ account }) => {
                             //     /^(?:https?:\/\/)?(?:www\.)?/i,
                             //     ''
                             // ).split('/')[0]
-                            '206.238.196.249:1234'
+                            'https://www.nbwallet.cc'
                         }
                     </a>
                     )

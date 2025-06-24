@@ -3,9 +3,9 @@ import { Translate } from 'react-localize-redux';
 import styled from 'styled-components';
 
 import LandingBackground from './LandingBackground';
-import iPhoneMockup from '../../images/iphone-mockup.png';
 import FormButton from '../common/FormButton';
 import Container from '../common/styled/Container.css';
+import phoneHome from './phone-home.png';
 
 const StyledContainer = styled.div`
     &&& {
@@ -170,7 +170,7 @@ export function GuestLanding() {
                     </FormButton>
                 </div>
                 <div className='img-wrapper'>
-                    <img src={iPhoneMockup} alt='Sign up' />
+                    <img src={phoneHome} alt='Sign up' />
                 </div>
             </Container>
         </StyledContainer>

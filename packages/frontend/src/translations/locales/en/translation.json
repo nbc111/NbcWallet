@@ -364,7 +364,7 @@
         "coinMarketLink": "More on CoinMarketCap",
         "descMoonpay": "PurchaseNBC through MoonPay using your preferred payment method.",
         "descThree": "Transfer your tokens from Ethereum toNBC Wallet using a bridge.",
-        "descTwo": "NBCis available to purchase through the following exchanges.",
+        "descTwo": "NBC is available to purchase through the following exchanges.",
         "descUtorg": "PurchaseNBC through Utorg using your preferred payment method.",
         "moonPay": "MoonPay",
         "nearPurchaseSubTitle": "Use your preferred payment method to purchase $NBCthrough one of our supported partners.",
@@ -373,7 +373,7 @@
         "seeMore": "See more on",
         "subTitle": "Choose from a variety of funding options to top up your wallet!",
         "supportedExchanges": "Supported Exchanges",
-        "supportedSubTitle": " $NBCis available to purchase and trade on various exchanges.",
+        "supportedSubTitle": " $NBC is available to purchase and trade on various exchanges.",
         "title": "Top Up",
         "utorg": "Utorg"
     },
@@ -753,7 +753,7 @@
         "banner": "NBCWallet is in Private Beta",
         "desc": "Securely store and stake yourNBC tokens and compatible assets with <span>NBCWallet</span>.",
         "or": "or",
-        "title": "NBCis here."
+        "title": "NBC is here."
     },
     "ledgerSignTxModal": {
         "ADD_ACCESS_KEY": "You will need to confirm login details on your Ledger.",
@@ -896,8 +896,8 @@
     },
     "networkBanner": {
         "desc": "This wallet (and network) are for testing purposes only. Tokens and other assets have no value. Accounts created do not transfer to Mainnet.",
-        "header": "NBCtest Wallet",
-        "title": "Test-only Wallet"
+        "header": "NBC Wallet",
+        "title": "Wallet"
     },
     "NFTDetail": {
         "attributes": "Attributes",

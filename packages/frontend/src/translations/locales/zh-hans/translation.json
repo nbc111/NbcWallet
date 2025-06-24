@@ -789,8 +789,8 @@
     },
     "networkBanner": {
         "desc": "当前钱包（和网络）仅供测试。测试网通证和其他资产均无价值。测试网账户不会迁移至主网。",
-        "header": "NBC 测试钱包",
-        "title": "测试网钱包"
+        "header": "NBC 钱包",
+        "title": "钱包"
     },
     "NFTDetail": {
         "attributes": "属性",
